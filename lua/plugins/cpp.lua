@@ -1,7 +1,7 @@
 return { -- C++ LSP 配置（增强补全与依赖解析）
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
+		dependencies = { "mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim" },
 		ft = { "c", "cpp", "h", "hpp" },
 		config = function()
 			local smart = require("config.smart")

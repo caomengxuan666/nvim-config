@@ -50,4 +50,8 @@ require("lazy").setup({
       },
     },
   },
+        -- 追加：强制使用 SSH 地址（不破坏原有配置）
+        git = {
+                url_format = "git@github.com:%s.git",
+        },
 })

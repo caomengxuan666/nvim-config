@@ -3,8 +3,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+			"mason-org/mason.nvim",
+			"mason-org/mason-lspconfig.nvim",
 			"nvim-telescope/telescope.nvim", -- 用于错误列表搜索
 		},
 		ft = "python",
@@ -32,7 +32,7 @@ return {
 			require("mason-lspconfig").setup()
 
 			-- LSP 启动处理器
-			require("mason-lspconfig").setup_handlers({
+			require("mason-lspconfig").setup({
 				-- 所有 LSP 通用配置
 				function(server_name)
 					require("lspconfig")[server_name].setup({
